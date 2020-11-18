@@ -1,0 +1,66 @@
+{% load static %}
+<!doctype html>
+<html>
+
+{%include 'animes/inicio/head_inicio.html' %}
+
+<body id="fondo"> 
+    <div class="container">   
+     <br><br><br><br><br>
+      <div class="row">
+        {% for anime in object_list %}
+        <div class="col-md">        
+            <div class="card text-center" >
+              <img class="card-img-top" src="{% static 'img/shingeki.jpg' %}" height="550" alt="Card image">  
+              <div class="card-body">
+                <h4 class="card-title">{{anime.nombre}}</h4>
+                <p class="card-text">{{anime.descripcion_corta}}</p>
+                <a href="{% url 'detalle_anime' anime.pk %}" class="stretched-link"></a>
+              </div>
+            </div>          
+        </div>
+        {% endfor %}
+  
+        <div class="row">       
+          <div class="col-md">        
+              <div class="card text-center" >
+                <img class="card-img-top" src="{%static 'img/shingeki.jpg'%}" height="550" alt="Card image">  
+                <div class="card-body">
+                  <h4 class="card-title">Shingeki No Kyojin</h4>
+                  <p class="card-text">“Si piensas que la realidad es sólo vivir cómodamente y seguir tus propios caprichos, ¿Cómo puedes atreverte a llamarte a ti mismo soldado?.”</p>
+                  <a href="{%url 'inicio_snk_real'%}" class="stretched-link"></a>
+                </div>
+              </div>          
+          </div>
+        
+          <div class="col-md">        
+            <div class="card text-center">
+              <img class="card-img-top" src="{%static 'img/cosmere.jpg'%}" height="550" alt="Card image">    
+              <div class="card-body">
+                <h4 class="card-title">Stormlight</h4>
+                <p class="card-text">Vida antes que muerte.
+                                      Fuerza antes que debilidad.
+                                      Viaje antes que destino.                                   
+                </p>
+                <br>
+                <a href="{%url 'inicio_storm'%}" target="_self" class="stretched-link"></a>
+              </div>
+            </div>          
+        </div>
+
+        <div class="col-md">        
+          <div class="card text-center">
+            <img class="card-img-top" src="{%static 'img/onepiece.jpg'%}" height="550" alt="Card image">    
+            <div class="card-body">
+              <h4 class="card-title">One Piece</h4>
+              <p class="card-text"> “Si se preocuparan por algo tan trivial como perder el respeto, entonces es mejor no tenerlo en primer lugar.”</p>
+              <br>
+              <a href="{%url 'inicio_op'%}" target="_self" class="stretched-link"></a>
+            </div>
+          </div>          
+      </div>      
+
+      </div>
+    </div>
+  </body>
+</html>

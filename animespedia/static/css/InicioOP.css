@@ -1,0 +1,67 @@
+#fondo{
+    background-image: url(fondoOP.jpg);
+    background-position: center bottom;
+}
+
+#caja1{
+    border: inset;
+    border-bottom: 6.5px solid rgb(0, 0, 0); 
+    font-family:initial;
+    color: #000000;
+    font-size:100px;
+    background-color: transparent;
+    width: 100%;
+    padding: 2px;
+    float: left;
+}
+
+#cajainicial{
+    background:transparent;
+}
+
+#cajaborde{
+    background:rgba(204, 82, 0, 0.5) ;
+    border: solid brown;
+}
+
+#cajacentral{
+    font-family:initial 100;
+    border-bottom: 6.5px solid rgb(0, 0, 0);
+    color: black;
+    width: 38%;
+    
+}
+#cajapequeña{
+    background:rgba(0, 0, 0, 0.808) ;
+    font-size: large;
+    color: white;
+    font-family: initial 100;
+    border: inset rgb(0, 0, 0);
+}
+#imgderecha{
+    border: solid 3px rgb(0, 0, 0);
+    float: right;
+    height: auto;
+    max-width: 100%;
+    
+}
+
+#imgizquierda{
+    border: solid 3px rgb(0, 0, 0);
+    float: left;
+    height: auto;
+    max-width: 100%;
+}
+#item{
+    font-family:initial 100;
+    color: lavenderblush;
+    border-bottom: 6.5px dashed rgb(255, 0, 0);
+    width: 100%;
+}
+
+h3{
+    font-family:initial 100;
+    color: lavenderblush;
+    border-bottom: 6.5px dashed rgb(255, 0, 0);
+    width: 46%;
+}

@@ -1,0 +1,53 @@
+#fondo{
+    background-image: url(fondoStormlight.jpg);
+    background-position: center bottom;
+}
+
+#caja1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    padding: 2px;
+    text-align: center;
+}
+
+#cajainicio{
+    background:white ;
+}
+
+#principio{
+    font-family:initial 100;
+    border-top: solid 3px #ffcc00;
+    color: black;
+    width: 100%;    
+}
+
+#enlaces{
+    color: black;    
+}
+#enlaces a:hover{
+    color:white; 
+    background-color: #cc6600;   
+}
+#boton{
+    background-color: #ff884d;
+    border-color: black;
+}
+
+.cajacentral{
+    text-align: center;
+    font-family:initial 100;
+    border-bottom:  solid rgb(0, 0, 0);
+    color: black;
+    width: 300px;
+    margin: auto;
+
+}
+.cajapequeña{
+    font-size: large;
+    color: black;
+    font-family: initial 100;
+    text-align: justify; 
+}
+.imgizquierda{
+    float: left;
+}

@@ -1,0 +1,61 @@
+#fondosnk{
+    background-image: url(fondoSNK.jpg);
+    background-position: center bottom;
+}
+
+#caja1snk{
+    border: inset;
+    border-bottom: 6.5px solid rgb(0, 0, 0); 
+    font-family:initial;
+    color: #000000;
+    font-size:100px;
+    background-color: rgba(255, 255, 255, 0.438);
+    width: 100%;
+    padding: 2px;
+    float: left;
+}
+
+#cajainicialsnk{
+    background:rgba(255, 0, 0, 0.719) ;
+    border: solid brown;
+}
+
+.cajacentralsnk{
+    font-family:initial 100;
+    border-bottom: 6.5px solid rgb(0, 0, 0);
+    color: black;
+    width: 38%;
+    
+}
+.cajapequeñasnk{
+    background:rgba(0, 0, 0, 0.808) ;
+    font-size: large;
+    color: white;
+    font-family: initial 100;
+    border: inset rgb(0, 0, 0);
+    text-align: justify;
+}
+.imgderechasnk{
+    border: solid 3px rgb(0, 0, 0);
+    float: right;
+    
+}
+
+.imgizquierdasnk{
+    border: solid 3px rgb(0, 0, 0);
+    float: left;
+    
+}
+.itemskn{
+    font-family:initial 100;
+    color: lavenderblush;
+    border-bottom: 6.5px dashed rgb(255, 0, 0);
+    width: 100%;
+}
+
+h3{
+    font-family:initial 100;
+    color: lavenderblush;
+    border-bottom: 6.5px dashed rgb(255, 0, 0);
+    width: 46%;
+}

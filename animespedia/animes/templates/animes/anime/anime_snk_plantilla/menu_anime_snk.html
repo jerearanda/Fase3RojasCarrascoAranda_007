@@ -1,0 +1,33 @@
+{% load static %}
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+<!-- logo -->
+<a class="navbar-brand" href="{%url 'inicio_snk_real'%}"><!--aca ira el inicio de la pagina web-->
+    <img class="img-fluid" src="{%static 'imagen/logoSnk.png'%}" width="50" height="60" alt="">
+  </a>
+  
+  <!-- enlaces -->
+  <div class="collapse navbar-collapse" id="opciones">   
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{%url 'inicio'%}" id="enlaces">UNIVERSOS</a>
+      </li>
+        <a class="nav-link" href="{%url 'inicio_snk_real'%}">INICIO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{%url 'galeria_snk'%}">FOTOGRAFIAS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{%url 'personajes_snk'%}">PERSONAJES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://shingeki-no-kyojin.fandom.com/es/wiki/Shingeki_no_Kyojin_Wiki">SITIO ANEXO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{%url 'formulario_snk'%}">FORMULARIO</a>
+      </li>           
+    </ul>
+  </div>
+</nav>

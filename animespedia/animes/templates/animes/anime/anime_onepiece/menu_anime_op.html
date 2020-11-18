@@ -1,0 +1,34 @@
+{% load static %}
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+<!-- logo -->
+<a class="navbar-brand" href="{%url 'inicio_op'%}"><!--aca ira el inicio de la pagina web-->
+    <img src="{%static 'imagen/logoOP.png'%}" width="60" height="60" alt="">
+  </a>
+  
+  <!-- enlaces -->
+  <div class="collapse navbar-collapse" id="opciones">   
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{%url 'inicio'%}">UNIVERSOS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{%url 'inicio_op'%}">INICIO OP</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{%url 'galeria_op'%}">FOTOGRAFIAS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{%url 'personajes_op'%}">PERSONAJES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{%url 'test_op'%}">FORMULARIO</a>
+      </li>    
+      <li class="nav-item">
+        <a class="nav-link" href="https://onepiece.fandom.com/es/wiki/One_Piece_Wiki">SITIO ANEXO</a>
+      </li>     
+    </ul>
+  </div>
+</nav>

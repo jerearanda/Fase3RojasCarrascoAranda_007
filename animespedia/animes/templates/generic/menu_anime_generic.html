@@ -1,0 +1,33 @@
+{% load static %}
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+<!-- logo -->
+<a class="navbar-brand" href="{% url 'detalle_anime' anime.pk %}"><!--aca ira el inicio de la pagina web-->
+    <img class="img-fluid" src="{%static 'imagen/logoPagina.png'%}" width="50" height="60" alt="">
+  </a>
+  
+  <!-- enlaces -->
+  <div class="collapse navbar-collapse" id="opciones">   
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{%url 'inicio'%}" id="enlaces">UNIVERSOS</a>
+      </li>
+        <a class="nav-link" href="{% url 'detalle_anime' anime.pk %}">INICIO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{}">FOTOGRAFIAS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{}">PERSONAJES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="">SITIO ANEXO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{}">FORMULARIO</a>
+      </li>           
+    </ul>
+  </div>
+</nav>

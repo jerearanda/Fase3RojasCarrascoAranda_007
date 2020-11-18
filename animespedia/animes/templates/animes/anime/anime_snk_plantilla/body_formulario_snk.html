@@ -1,0 +1,152 @@
+{% load static %}
+<body id="fondosnk">
+    <header>
+        <div id="caja1snk">
+            <h1>Shingeki No Kyojin</h1>
+        </div>
+    </header>
+<br><br><br><br>
+
+<div class="container" id="cajainicialsnk">
+  <h2 class="cajacentralsnk">¿Test de Shingeki no Kyojin?</h2>
+
+
+  <form action="CorrectoSNK.html" method="post" name="datos" onsubmit="return Validacion()">
+  <div class="cajapequeñaf">
+    <form role="form">
+      <div class="form-group"> 
+        <label for="nombre">Ingrese nombre de usuario:</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Ej:Usuario01">
+      </div>
+    </div>
+      <h2>Pregunta 1: Eren y Mikasa son:</h2>
+      <div class ="cajapequeñaf">
+      <div class="form-check" id="opciones" name="opcion">
+        <input class="form-check-input" type="radio" value="Primos" id="radio1" name="grupo1">
+        <label class="form-check-label" for="radio1">
+          <p>Primos</p>
+        </div>
+        </label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="Hermanos" id="radio1" name="grupo1">
+        <label class="form-check-label" for="radio1">
+          <p>Hermanos</p>
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="Hermanastros" id="radio1" name="grupo1">
+        <label class="form-check-label" for="radio1">
+          <p>Hermanastros</p>
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="Pareja" id="radio1" name="grupo1">
+        <label class="form-check-label" for="radio1">
+          <p>Pareja</p>
+        </label>
+      </div>
+    </div>
+    <h2>Pregunta 2:¿Son Mikasa y Levin parientes?</h2>
+    <div class ="cajapequeñaf">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="Verdadero" id="radio1" name="grupo2">
+        <label class="form-check-label" for="radio1">
+          <p>Verdadero</p>
+        </div>
+        </label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="Falso" id="radio1" name="grupo2">
+        <label class="form-check-label" for="radio1">
+          <p>Falso</p>
+        </label>
+      </div>
+    </div>
+      <h2>Pregunta 3:¿Cual es el verdadero nombre de Christa?:</h2>
+      <div class ="cajapequeñaf">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="Historia" id="radio1" name="grupo3">
+        <label class="form-check-label" for="radio1">
+          <p>Historia</p>
+        </div>
+        </label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="Christa" id="radio1" name="grupo3">
+        <label class="form-check-label" for="radio1">
+          <p>Christa</p>
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="Eva" id="radio1" name="grupo3">
+        <label class="form-check-label" for="radio1">
+          <p>Eva</p>
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="Susan" id="radio1" name="grupo3">
+        <label class="form-check-label" for="radio1">
+          <p>Susan</p>
+        </label>
+      </div>
+    </div>
+
+    <h2>Pregunta 4:¿Cual es el nombre del primer Opening?</h2>
+    <div class ="cajapequeñaf">
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="Jiyuu no Tsubasa" id="radio1" name="grupo4">
+      <label class="form-check-label" for="radio1">
+        <p>Jiyuu no Tsubasa</p>
+      </div>
+      </label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="Guren no Yumiya" id="radio1" name="grupo4">
+      <label class="form-check-label" for="radio1">
+        <p>Guren no Yumiya</p>
+      </label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="Shinzou Sasageyo" id="radio1" name="grupo4">
+      <label class="form-check-label" for="radio1">
+        <p>Shinzou Sasageyo</p>
+      </label>
+    </div>
+  </div>
+    <h2>Pregunta 5:¿Cuantas murallas hay en el Anime?</h2>
+<div class="cajapequeñaf">
+<br>
+    <form class="form-inline">
+      <select class="custom-select my-1 mr-sm-2" id="murallas">
+        <option selected>Pulse para seleccionar...</option>
+        <option value="1">Uno</option>
+        <option value="2">Dos</option>
+        <option value="3">Tres</option>
+        <option value="4">Cuatro</option>
+        <option value="3">Cinco</option>
+      </select>
+      <br>
+  </div>
+
+  <h2>Pregunta 6:¿A quien le salvaron  la vida en el Capitulo 55</h2>
+  <div class ="cajapequeñaf">
+  <div class="form-check">
+    <input class="form-check-input" type="radio" value="Erwin Smith" id="radio1" name="grupo6">
+    <label class="form-check-label" for="radio1">
+      <p>Erwin Smith</p>
+    </div>
+    </label>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" value="Armin Arlert" id="radio1" name="grupo6">
+    <label class="form-check-label" for="radio1">
+      <p>Armin Arlert</p>
+    </label>
+  </div>
+</div>
+<br>
+<input type="submit" value="Enviar Datos"  class="btn btn-primary" onclick="Validacion();">
+</div>
+
+</form>
+<br><br><br>
+   </body>

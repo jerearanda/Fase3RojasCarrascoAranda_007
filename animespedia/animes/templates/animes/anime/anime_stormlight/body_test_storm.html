@@ -1,0 +1,93 @@
+{% load static %}
+<body id="fondo">
+
+    <header>
+      <div id="caja1">
+        <img class="img-fluid" src="'{%static 'imagen/logo2.png'%}" >
+        <h1>The Stormlight Archive</h1>
+      </div>
+    </header>
+  
+    <div class="container" id="cajainicio">
+      <div class="container" >
+          <h2 id="principio"><br>Encuesta Radiante</h2><br><br>
+        <div class="cajapequeña">
+          <form action="IndexStormlight.html" method="post" name="datos" onsubmit="return validacion()">
+            <label for="nombre">Ingrese nombre*:</label>
+            <input type="text" name="nom" id="nombre" placeholder="Digite su nombre">
+            <br><br>
+            <label for="edad">Ingrese edad*:</label>
+            <input type="text" name="ed" id="edad" placeholder="Digite su edad">
+            <br><br>
+            <label for="opcion">País*:</label>
+            <select id="op" name="opcion">
+                <option value="">- Selecciona una opción -</option>
+                <option value="1">Chile</option>
+                <option value="2">Venezuela</option>
+                <option value="3">Perú</option>
+                <option value="4">Argentina</option>
+                <option value="5">Bolivia</option>
+                <option value="6">Colombia</option>
+                <option value="7">Ecuador</option>
+                <option value="8">Paraguay</option>
+              </select>
+            <br><br>
+              <label for="saga">Saga favorita del cosmere:</label>
+              <input type="text" name="sagafa" id="sagafav" placeholder="Ingrese su saga preferida">             
+              <br><br>
+              <label for="clasi">Como clasificaria la pagina*:</label>
+              <br>  
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" value="" id="radio4" name="grupo2">
+                  <label class="form-check-label" for="radio4">
+                    Muy mala
+                  </label>
+                </div>
+          
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" value="" id="radio5" name="grupo2">
+                  <label class="form-check-label" for="radio4">
+                    Mala
+                  </label>
+                </div>
+          
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" value="" id="radio6" name="grupo2">
+                  <label class="form-check-label" for="radio4">
+                    Regular
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" value="" id="radio7" name="grupo2">
+                  <label class="form-check-label" for="radio4">
+                    Buena
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" value="" id="radio8" name="grupo2">
+                  <label class="form-check-label" for="radio4">
+                    Muy buena
+                  </label>
+                </div> 
+              
+              <br><br>
+              <div class="form-group"> 
+                  <label for="sugerencias">Deje aquí sus sugerencias</label>
+                  <textarea class="form-control" rows="5" id="sugerencias" name="sugerencias" placeholder="Digite alguna sugerencia que pueda mejorar su experiencia en la pagina"></textarea>
+               </div> 
+              <br><br>
+              <input type="submit" value="Enviar Datos">  
+          </form>    
+    </div>
+    <br>
+  </div>
+  <br><br><br><br>
+    </div>
+    <br><br><br><br>
+  
+    <!-- Si utilizamos componentes de Bootstrap que requieran Javascript agregar estos tres archivos -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  </body>

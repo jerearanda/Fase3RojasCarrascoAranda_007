@@ -1,0 +1,30 @@
+#cajacentralp{
+    font-family:initial 100;
+    border-top: solid 3px #ffcc00;
+    color: black;   
+}
+
+.itemp{
+    font-family:initial 100;
+    color: lavenderblush;
+    border-bottom: 5.5px dashed rgb(255, 0, 0);
+    color: black;
+    text-indent: 20px;
+}
+.itempright{
+    font-family:initial 100;
+    color: lavenderblush;
+    border-bottom: 5.5px dashed rgb(0, 195, 255);
+    color: black;
+    text-align: right;
+}
+
+.imgderechap{
+    border: solid 3px rgb(0, 0, 0);
+    float: right;    
+}
+
+.imgizquierdap{
+    border: solid 3px rgb(0, 0, 0);
+    float: left;    
+}

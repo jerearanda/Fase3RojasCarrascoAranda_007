@@ -1,0 +1,152 @@
+{% load static %}
+<body id="fondo">
+    <header>
+        <div id="caja1">
+            <h1>One Piece</h1>
+        </div>
+    </header>
+<br><br><br><br>
+
+<div class="container" id="cajainicial">
+  <div id="cajaborde">
+  <h2 class="cajacentral">¿Test de One Piece?</h2>
+  <form action="CorrectoOP.html" method="post" name="datos" onsubmit="return Validacion()">
+  <div class="cajapequeñaf">
+    <form role="form">
+      <div class="form-group"> 
+        <label for="nombre">Ingrese Nombre de Usuario:</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Ej:Usuario01">
+      </div>
+    </div>
+      <h2>Pregunta 1: Quien le hizo la cicatriz en el ojo a Luffy?:</h2>
+      <div class ="cajapequeñaf">
+      <div class="form-check" id="opciones" name="opcion">
+        <input class="form-check-input" type="radio" value="Shanks" id="radio1" name="grupo1">
+        <label class="form-check-label" for="radio1">
+          <p>Shanks</p>
+        </div>
+        </label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="Ace" id="radio1" name="grupo1">
+        <label class="form-check-label" for="radio1">
+          <p>Ace</p>
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="El" id="radio1" name="grupo1">
+        <label class="form-check-label" for="radio1">
+          <p>El</p>
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="Barba negra" id="radio1" name="grupo1">
+        <label class="form-check-label" for="radio1">
+          <p>Barba negra</p>
+        </label>
+      </div>
+    </div>
+    <h2>Pregunta 2:¿Son Hermanos Ace, Luffy y Sabo?</h2>
+    <div class ="cajapequeñaf">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="Verdadero" id="radio1" name="grupo2">
+        <label class="form-check-label" for="radio1">
+          <p>Verdadero</p>
+        </div>
+        </label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="Falso" id="radio1" name="grupo2">
+        <label class="form-check-label" for="radio1">
+          <p>Falso</p>
+        </label>
+      </div>
+    </div>
+      <h2>Pregunta 3:¿Quien es el padre de Ace?:</h2>
+      <div class ="cajapequeñaf">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="Monkey D. Dragon" id="radio1" name="grupo3">
+        <label class="form-check-label" for="radio1">
+          <p>Monkey D. Dragon</p>
+        </div>
+        </label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="Gol D. Roger" id="radio1" name="grupo3">
+        <label class="form-check-label" for="radio1">
+          <p>Gol D. Roger</p>
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="Edward Newgate" id="radio1" name="grupo3">
+        <label class="form-check-label" for="radio1">
+          <p>Edward Newgate</p>
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="Shanks" id="radio1" name="grupo3">
+        <label class="form-check-label" for="radio1">
+          <p>Shanks</p>
+        </label>
+      </div>
+    </div>
+
+    <h2>Pregunta 4:¿Cual es el nombre del primer Opening?</h2>
+    <div class ="cajapequeñaf">
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="¡We Are!" id="radio1" name="grupo4">
+      <label class="form-check-label" for="radio1">
+        <p>¡We Are!</p>
+      </div>
+      </label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="We Go" id="radio1" name="grupo4">
+      <label class="form-check-label" for="radio1">
+        <p>We Go</p>
+      </label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="We Can!" id="radio1" name="grupo4">
+      <label class="form-check-label" for="radio1">
+        <p>We Can!</p>
+      </label>
+    </div>
+  </div>
+    <h2>Pregunta 5:¿Cuantos tipos de Frutas del Diablo Existen?</h2>
+<div class="cajapequeñaf">
+<br>
+    <form class="form-inline">
+      <select class="custom-select my-1 mr-sm-2" id="Frutas">
+        <option selected>Pulse para seleccionar...</option>
+        <option value="1">Uno</option>
+        <option value="2">Dos</option>
+        <option value="3">Tres</option>
+        <option value="4">Cuatro</option>
+        <option value="3">Cinco</option>
+      </select>
+      <br>
+  </div>
+
+  <h2>Pregunta 6:¿Quien fue el Primer Mugiwara despues de Luffy?</h2>
+  <div class ="cajapequeñaf">
+  <div class="form-check">
+    <input class="form-check-input" type="radio" value="Ronoroa Zoro" id="radio1" name="grupo6">
+    <label class="form-check-label" for="radio1">
+      <p>Ronoroa Zoro</p>
+    </div>
+    </label>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" value="Usopp" id="radio1" name="grupo6">
+    <label class="form-check-label" for="radio1">
+      <p>Usopp</p>
+    </label>
+  </div>
+</div>
+<br>
+<input type="submit" value="Enviar Datos"  class="btn btn-primary" onclick="Validacion();">
+</div>
+</div>
+
+</form>
+<br><br><br>
+   </body>

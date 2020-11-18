@@ -1,0 +1,31 @@
+{% load static %}
+<nav class="navbar navbar-expand-sm navbar-dark bg-light">
+    <button id="boton" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+      <span class="navbar-toggler-icon" ></span>
+    </button>
+<!-- logo -->
+<a class="navbar-brand" href="{%url 'inicio_storm'%}">
+    <img class="img-fluid" src="{%static 'imagen/logoStomlight.png'%}" width="70" height="70" alt="">
+</a>
+
+<!-- enlaces -->
+<div class="collapse navbar-collapse" id="opciones" >   
+  <ul class="navbar-nav" id="enlaces">
+    <li class="nav-item">
+      <a class="nav-link" href="{%url 'inicio'%}" id="enlaces">UNIVERSOS</a>
+    </li>
+    <li class="nav-item" >
+      <a class="nav-link" href="{%url 'inicio_storm'%}" id="enlaces" >INICIO</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{%url 'galeria_storm'%}"id="enlaces" >FOTOGRAFIAS</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'personajes_storm'%}"id="enlaces" >PERSONAJES</a>
+    </li> 
+    <li class="nav-item">
+      <a class="nav-link" href="{%url 'test_storm'%}" id="enlaces" >ENCUESTA</a>
+    </li>          
+  </ul>
+</div>
+</nav>

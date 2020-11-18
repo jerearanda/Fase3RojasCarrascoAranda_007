@@ -1,0 +1,52 @@
+{% load static %}
+<head>
+    <!--en esta seccion se configura el sitio-->
+        <title>Stromlight</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="{%static 'css/InicioStormlight.css'%}">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="{%static 'css/bootstrap.min.css'%}" type="text/css" rel="stylesheet">
+        <script type="text/Javascript">
+            function validacion()
+              {
+                nom= document.getElementById('nombre').value;
+                ed = document.getElementById('edad').value; 
+                ubicacion = document.getElementById('op').selectedIndex;
+                if(nom == null || nom.length==0 || /^\s+$/.test(nom))
+                {
+                  alert('Error.. debe ingresar un nombre');
+                  document.datos.nom.focus();
+                  return false;
+                  }
+                            
+                if(isNaN(ed) || ed.length == 0)
+                  {
+                    alert('Error...debe ingresar una edad válida');
+                    document.datos.ed.focus();
+                    return false;
+                  }
+    
+                if (ubicacion == null || ubicacion == 0)
+                  {
+                    alert('Seleccione un país');
+                    document.datos.opciones.focus();
+                    return false;
+                  }
+                var group = document.datos.grupo2;
+                for (var i=0; i<group.length; i++) {
+                  if (group[i].checked)
+                  break;
+                }
+                if (i==group.length){
+                  alert("Seleccione una clasificacion ");
+                  return false;
+                } 
+                alert('Gracias por sus respuestas\nAhora ve con el Todopoderoso Caballero Radiante'); 
+                return true;                           
+              }
+    
+    
+        </script>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+          {% include 'animes/anime/anime_stormlight/menu_anime_storm.html' %}
+    </head>

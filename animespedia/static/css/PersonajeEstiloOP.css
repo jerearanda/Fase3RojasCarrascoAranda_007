@@ -1,0 +1,19 @@
+
+#itemp{
+    font-family:initial 100;
+    color: lavenderblush;
+    border-bottom: 6.5px dashed rgb(255, 0, 0);
+    width: 100%;
+}
+
+#imgderechap{
+    border: solid 3px rgb(0, 0, 0);
+    float: right;
+    
+}
+
+#imgizquierdap{
+    border: solid 3px rgb(0, 0, 0);
+    float: left;
+    
+}
