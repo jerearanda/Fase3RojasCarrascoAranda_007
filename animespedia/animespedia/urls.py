@@ -14,17 +14,25 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from django.urls import include
-from animes.views import (AnimeListView, AnimeDetailView, AnimeDelete,AnimeCreate,AnimeUpdate, inicio_anime ,galeria_snk ,personajes_snk, formulario_snk, inicio_snk_real,inicio_storm
-,galeria_storm, personajes_storm, test_storm, inicio_op, personajes_op, galeria_op, test_op)
+from django.urls import path, include
+from animes.views import *
 from django.conf import settings
 from django.conf.urls.static import static
 
+
+###############
+## URLs de admin ##generos
+###############
 urlpatterns = [
     path('admin/', admin.site.urls),
     path ('animes/', include('animes.urls')),
+]
 
+###############
+## URLs de anime ##
+###############
+
+urlpatterns += [
     path ("", AnimeListView.as_view(), name="inicio"),
     path ("animes/<int:pk>/", AnimeDetailView.as_view(), name="detalle_anime"),
     path ("animes/<int:pk>/delete", AnimeDelete.as_view(), name="borrar_anime"),
@@ -32,10 +40,22 @@ urlpatterns = [
     path ("animes/<int:pk>/update", AnimeUpdate.as_view(), name="editar_anime"),
 ]
 
+###############
+## URLs de autor ##
+###############
 urlpatterns += [
-    path('admin/', admin.site.urls),
-    path ('animes/', include('animes.urls')),
+    path ("", AutorListView.as_view(), name="inicio"),
+    path ("autores/<int:pk>/", AutorDetailView.as_view(), name="detalle_autor"),
+    path ("autores/<int:pk>/delete", AutorDelete.as_view(), name="borrar_autor"),
+    path ("autores/create", AutorCreate.as_view(), name="crear_autor"),
+    path ("autores/<int:pk>/update", AutorUpdate.as_view(), name="editar_autor"),
+]
 
+###############
+## URLs de paginas#
+###############
+
+urlpatterns += [
     path ("inicio_anime/", inicio_anime, name="inicio_anime"),
     path ("galeria_snk/", galeria_snk, name="galeria_snk"),
     path ("personajes_snk/", personajes_snk, name="personajes_snk"),
@@ -53,4 +73,13 @@ urlpatterns += [
     path ("test_op/", test_op, name="test_op"),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-
+###############
+## URLs de AnimeGen ##
+###############
+urlpatterns += [
+    path ("", AnimeGenListView.as_view(), name="inicio"),
+    path ("generos/<int:pk>/", AnimeGenDetailView.as_view(), name="detalle_genero"),
+    path ("generos/<int:pk>/delete", AnimeGenDelete.as_view(), name="borrar_genero"),
+    path ("generos/create", AnimeGenCreate.as_view(), name="crear_genero"),
+    path ("generos/<int:pk>/update", AnimeGenUpdate.as_view(), name="editar_genero"),
+]

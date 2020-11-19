@@ -6,6 +6,10 @@ class Autor(models.Model):
 	apellido = models.CharField(max_length=100)
 	nacimiento = models.DateField()
 
+	def __str__(self):
+		"""String for representing the Model object."""
+		return self.nombre
+
 class AnimeGen(models.Model):
 	"""Model representing an author."""
 	name = models.CharField(max_length=100)

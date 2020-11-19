@@ -1,0 +1,20 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Nacimiento</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for autor in object_list %}
+        <tr>
+            <th scope="row">{{autor.pk}}</th>
+            <th scope="row">{{autor.nombre}}</th>
+            <td colspan="2">{{autor.apellido}}</td>
+            <td>{{autor.nacimiento}}</td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
