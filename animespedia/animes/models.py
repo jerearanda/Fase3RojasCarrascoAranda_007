@@ -27,6 +27,10 @@ class Anime(models.Model):
 	descripcion_corta = models.TextField(max_length=500)
 	autor=models.ForeignKey(Autor,on_delete= models.CASCADE, blank=True, null=True)
 	genero=models.ForeignKey(AnimeGen,on_delete= models.CASCADE, blank=True, null=True)
+	imagen_fondo = models.ImageField(upload_to="img")
+	imagen_logo = models.ImageField(upload_to="img")
+	imagen_portada = models.ImageField(upload_to="img")
+	imagen_descripcion = models.ImageField(upload_to="img")
 
 	def __str__(self):
  		return self.nombre

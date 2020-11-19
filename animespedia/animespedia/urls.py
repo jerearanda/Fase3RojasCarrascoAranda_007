@@ -18,6 +18,8 @@ from django.urls import path
 from django.urls import include
 from animes.views import (AnimeListView, AnimeDetailView, AnimeDelete,AnimeCreate,AnimeUpdate, inicio_anime ,galeria_snk ,personajes_snk, formulario_snk, inicio_snk_real,inicio_storm
 ,galeria_storm, personajes_storm, test_storm, inicio_op, personajes_op, galeria_op, test_op)
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -44,8 +46,11 @@ urlpatterns += [
     path ("galeria_storm/", galeria_storm, name="galeria_storm"),
     path ("personajes_storm/", personajes_storm, name="personajes_storm"),
     path ("test_storm/", test_storm, name="test_storm"),
+
     path ("inicio_op/", inicio_op, name="inicio_op"),
     path ("personajes_op/", personajes_op, name="personajes_op"),
     path ("galeria_op/", galeria_op, name="galeria_op"),
     path ("test_op/", test_op, name="test_op"),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+

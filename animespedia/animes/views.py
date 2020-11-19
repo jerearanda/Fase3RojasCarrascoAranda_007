@@ -29,7 +29,7 @@ class AnimeDelete(DeleteView):
 #Vista de Crear
 class AnimeCreate(CreateView):
     model = Anime
-    fields = ['nombre', 'descripcion', 'descripcion_corta'] #al agregar un nuevo model cambiar esto
+    fields = ['nombre', 'descripcion', 'descripcion_corta', 'imagen_portada', 'imagen_fondo', 'imagen_logo', 'imagen_descripcion'] #al agregar un nuevo model cambiar esto
     success_url = reverse_lazy('inicio')
 #Vista de Editar
 class AnimeUpdate(UpdateView):

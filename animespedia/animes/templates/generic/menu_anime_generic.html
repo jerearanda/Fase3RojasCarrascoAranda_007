@@ -5,7 +5,7 @@
     </button>
 <!-- logo -->
 <a class="navbar-brand" href="{% url 'detalle_anime' anime.pk %}"><!--aca ira el inicio de la pagina web-->
-    <img class="img-fluid" src="{%static 'imagen/logoPagina.png'%}" width="50" height="60" alt="">
+    <img class="img-fluid" src="/media/{{anime.imagen_logo}}" width="50" height="60" alt="">
   </a>
   
   <!-- enlaces -->

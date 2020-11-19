@@ -1,5 +1,5 @@
 {% load static %}
-<body id="fondosnk">
+<body id="fondosnk" style="background-image: url(/media/{{anime.imagen_fondo}})">
     <header>
         <div id="caja1snk">
             <h1>{{anime.nombre}}</h1>
@@ -12,7 +12,7 @@
   <h2 class="cajacentralsnk">¿Que es {{anime.nombre}}?</h2>
   <div class="cajapequeñasnk">
     <div class="imgderechasnk">
-    <img src="{%static 'imagen/Overlord.jpg'%}"  width="258" height="354" alt="">
+    <img src="/media/{{anime.imagen_descripcion}}"  width="258" height="354" alt="">
   </div>
     {{anime.descripcion}}
 </div>

@@ -11,7 +11,7 @@
         {% for anime in object_list %}
         <div class="col-md">        
             <div class="card text-center" >
-              <img class="card-img-top" src="{% static 'img/shingeki.jpg' %}" height="550" alt="Card image">  
+              <img class="card-img-top" src="/media/{{anime.imagen_portada}}" height="550" alt="Card image">
               <div class="card-body">
                 <h4 class="card-title">{{anime.nombre}}</h4>
                 <p class="card-text">{{anime.descripcion_corta}}</p>
