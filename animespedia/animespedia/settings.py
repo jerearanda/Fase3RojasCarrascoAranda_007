@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'animes'
+    'animes',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -129,4 +130,7 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/' # https://localhost:8000/media/
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/?logout=ok"
 

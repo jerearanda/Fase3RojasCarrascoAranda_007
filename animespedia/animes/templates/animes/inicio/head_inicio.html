@@ -6,6 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="{% static 'css/bootstrap.min.css' %}" type="text/css" rel="stylesheet"> 
-    
+
     {% include 'animes/inicio/menu_inicio.html' %} <!--Incluye archivos o codigos de otros templates-->
+
+    {% if request.GET.logout == 'ok' %}
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="text-center" style="color: white; width: 100%">
+            ¡Gracias por disfrutar de nuestra web!
+        </div>
+    </nav>
+    {% endif %}
 </head>

@@ -1,18 +1,36 @@
-<table class="table table-hover">
-    <thead>
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">name</th>
-        <th scope="col">summary</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for autor in object_list %}
-          <tr>
-              <th scope="row">{{animegen.pk}}</th>
-              <th scope="row">{{animegen.name}}</th>
-              <td colspan="2">{{animegen.summary}}</td>
-          </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+<!doctype html>
+<html lang="es">
+{% include 'animes/inicio/head_inicio.html' %}
+
+<body class="text-center">
+
+  <div class="container mt-5">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for animegen in object_list %}
+        <tr>
+          <th scope="row">{{animegen.pk}}</th>
+          <th scope="row">{{animegen.name}}</th>
+          <td scope="row">{{animegen.summary}}</td>
+          <td scope="row">
+            <a class="btn btn-sm btn-success" href="{% url 'detalle_genero' animegen.pk %}">Ver</a>
+            <a class="btn btn-sm btn-primary" href="{% url 'editar_genero' animegen.pk %}">Editar</a>
+            <a class="btn btn-sm btn-danger" href="{% url 'borrar_genero' animegen.pk%}">Eliminar</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+</body>
+
+</html>

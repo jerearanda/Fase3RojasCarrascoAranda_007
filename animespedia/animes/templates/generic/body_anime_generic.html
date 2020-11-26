@@ -8,6 +8,13 @@
 
 <br><br><br><br>
 
+<div class="container mb-2">
+    <div class="row">
+        <a class="btn btn-primary" href="{% url 'editar_anime' anime.pk %}">Editar</a>
+        <a class="btn btn-danger" href="{% url 'borrar_anime' anime.pk %}">Eliminar</a>
+    </div>
+</div>
+
 <div class="container" id="cajainicialsnk">
   <h2 class="cajacentralsnk">¿Que es {{anime.nombre}}?</h2>
   <div class="cajapequeñasnk">

@@ -90,20 +90,20 @@ class AutorDetailView(DetailView):
 #Vista de Eliminar
 class AutorDelete(DeleteView):
     model = Autor
-    success_url = reverse_lazy('inicio')
+    success_url = reverse_lazy('lista_autores')
 
 #Vista de Crear
 class AutorCreate(CreateView):
     model = Autor
     fields = ['nombre', 'apellido', 'nacimiento'] #al agregar un nuevo model cambiar esto
-    success_url = reverse_lazy('inicio')
+    success_url = reverse_lazy('lista_autores')
 
 #Vista de Editar
 class AutorUpdate(UpdateView):
     model = Autor
     fields = ['nombre', 'apellido', 'nacimiento']
     template_name_suffix = '_update_form'
-    success_url = reverse_lazy('inicio')
+    success_url = reverse_lazy('lista_autores')
 
 ###################
 # Vistas de Genero ######
@@ -122,19 +122,19 @@ class AnimeGenDetailView(DetailView):
 #Vista de Eliminar
 class AnimeGenDelete(DeleteView):
     model = AnimeGen
-    success_url = reverse_lazy('inicio')
+    success_url = reverse_lazy('lista_generos')
 
 #Vista de Crear
 class AnimeGenCreate(CreateView):
     model = AnimeGen
     fields = ['name', 'summary'] #al agregar un nuevo model cambiar esto
-    success_url = reverse_lazy('inicio')
+    success_url = reverse_lazy('lista_generos')
 
 #Vista de Editar
 class AnimeGenUpdate(UpdateView):
-    model = Autor
+    model = AnimeGen
     fields = ['name', 'summary']
     template_name_suffix = '_update_form'
-    success_url = reverse_lazy('inicio')
+    success_url = reverse_lazy('lista_generos')
 
 

@@ -1,20 +1,37 @@
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Apellido</th>
-      <th scope="col">Nacimiento</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for autor in object_list %}
-        <tr>
-            <th scope="row">{{autor.pk}}</th>
-            <th scope="row">{{autor.nombre}}</th>
-            <td colspan="2">{{autor.apellido}}</td>
-            <td>{{autor.nacimiento}}</td>
-        </tr>
-    {% endfor %}
-  </tbody>
-</table>
+<!doctype html>
+<html lang="es">
+  {% include 'animes/inicio/head_inicio.html' %}
+
+  <body class="text-center">
+    
+    <div class="container mt-5">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Nacimiento</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for autor in object_list %}
+              <tr>
+                  <th scope="row">{{autor.pk}}</th>
+                  <th scope="row">{{autor.nombre}}</th>
+                  <td scope="row">{{autor.apellido}}</td>
+                  <td scope="row">{{autor.nacimiento}}</td>
+                  <td scope="row">
+                    <a class="btn btn-sm btn-success" href="{% url 'detalle_autor' autor.pk %}">Ver</a>
+                    <a class="btn btn-sm btn-primary" href="{% url 'editar_autor' autor.pk %}">Editar</a>
+                    <a class="btn btn-sm btn-danger" href="{% url 'borrar_autor' autor.pk%}">Eliminar</a>
+                  </td>
+              </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+  </body>
+</html>

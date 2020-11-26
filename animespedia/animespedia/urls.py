@@ -20,6 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
+
 ###############
 ## URLs de admin ##generos
 ###############
@@ -38,13 +39,14 @@ urlpatterns += [
     path ("animes/<int:pk>/delete", AnimeDelete.as_view(), name="borrar_anime"),
     path ("animes/create", AnimeCreate.as_view(), name="crear_anime"),
     path ("animes/<int:pk>/update", AnimeUpdate.as_view(), name="editar_anime"),
+    path("", include("accounts.urls")),
 ]
 
 ###############
 ## URLs de autor ##
 ###############
 urlpatterns += [
-    path ("", AutorListView.as_view(), name="inicio"),
+    path ("autores/", AutorListView.as_view(), name="lista_autores"),
     path ("autores/<int:pk>/", AutorDetailView.as_view(), name="detalle_autor"),
     path ("autores/<int:pk>/delete", AutorDelete.as_view(), name="borrar_autor"),
     path ("autores/create", AutorCreate.as_view(), name="crear_autor"),
@@ -77,7 +79,7 @@ urlpatterns += [
 ## URLs de AnimeGen ##
 ###############
 urlpatterns += [
-    path ("", AnimeGenListView.as_view(), name="inicio"),
+    path ("generos/", AnimeGenListView.as_view(), name="lista_generos"),
     path ("generos/<int:pk>/", AnimeGenDetailView.as_view(), name="detalle_genero"),
     path ("generos/<int:pk>/delete", AnimeGenDelete.as_view(), name="borrar_genero"),
     path ("generos/create", AnimeGenCreate.as_view(), name="crear_genero"),
