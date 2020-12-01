@@ -23,9 +23,11 @@
                   <td scope="row">{{autor.apellido}}</td>
                   <td scope="row">{{autor.nacimiento}}</td>
                   <td scope="row">
+                    {% if request.user.is_superuser %}
                     <a class="btn btn-sm btn-success" href="{% url 'detalle_autor' autor.pk %}">Ver</a>
                     <a class="btn btn-sm btn-primary" href="{% url 'editar_autor' autor.pk %}">Editar</a>
                     <a class="btn btn-sm btn-danger" href="{% url 'borrar_autor' autor.pk%}">Eliminar</a>
+                    {% endif %}
                   </td>
               </tr>
           {% endfor %}

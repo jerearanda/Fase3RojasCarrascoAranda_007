@@ -18,6 +18,14 @@
       {% if request.user.is_superuser %}
       <a class="nav-link" href="{% url 'crear_genero' %}">CREAR GENERO</a>
       {% endif %}
+
+      {% if request.user.is_user %}
+      {% endif %}
+      <a class="nav-link" href="{% url 'lista_autores' %}">VER AUTORES</a>
+      {% if request.user.is_user %}
+      {% endif %}
+      <a class="nav-link" href="{% url 'lista_autores' %}">VER GENEROS</a>
+
     </div>
   </div>
   {% if request.user.is_authenticated %}

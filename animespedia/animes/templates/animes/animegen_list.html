@@ -21,9 +21,11 @@
           <th scope="row">{{animegen.name}}</th>
           <td scope="row">{{animegen.summary}}</td>
           <td scope="row">
+            {% if request.user.is_superuser %}
             <a class="btn btn-sm btn-success" href="{% url 'detalle_genero' animegen.pk %}">Ver</a>
             <a class="btn btn-sm btn-primary" href="{% url 'editar_genero' animegen.pk %}">Editar</a>
             <a class="btn btn-sm btn-danger" href="{% url 'borrar_genero' animegen.pk%}">Eliminar</a>
+            {% endif %}
           </td>
         </tr>
         {% endfor %}

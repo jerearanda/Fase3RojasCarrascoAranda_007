@@ -15,4 +15,4 @@ class AnimeTestCase(TestCase):
         self.assertEquals(field_label,'nombre')    
     def test_nombre_anime(self):
         anime1=Anime.objects.get(id=1)
-        self.assertEquals(anime1.nombre, "Overlord")     
+        self.assertEquals(anime1.nombre, "Overlord")
