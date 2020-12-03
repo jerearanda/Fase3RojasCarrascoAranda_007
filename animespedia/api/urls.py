@@ -4,5 +4,5 @@ from api.views import AnimesList
 
 app_name = "api"
 urlpatterns = [
-    path("animes/", AnimesList, name="get_animes"),
+    path("animes/", AnimesList.as_view(), name="get_animes"),
 ]
